@@ -1,0 +1,38 @@
+
+work_dir: "./data"
+seed: 42
+
+audio:
+  sample_rate: 16000
+
+datasets:
+  - name: "common_voice"
+    version: "17_0"
+    # Locale codes:
+    # bas (Basaa), fy-NL (Frisian), kmr (Kurmanji/Northern Kurdish),
+    # kk (Kazakh), ba (Bashkir), gl (Galician),
+    # ug (Uyghur), ha (Hausa), gn (Guaraní), hsb (Upper Sorbian)
+    locales: ["bas", "fy-NL", "kmr", "kk", "ba", "gl", "ug", "ha", "gn", "hsb"]
+    min_duration_sec: 1.0
+    max_duration_sec: 15.0
+
+# How many minutes per “dialect” (here: per language/locale cf readME)
+target_minutes_per_dialect: 5.0
+
+# Keep dialect mapping empty - in order to minimize having to load all of the tars
+dialect_normalization: {}
+
+# Example split settings for this setup
+split:
+  train_size: 0.8
+  val_size: 0.1
+  test_size: 0.1
+  stratify_on: ["language"]   # or ["language","dialect"] if dialects are added later
+  group_by: "speaker_id"
+  random_state: 42
+
+# (Optional) augmentation switch — by default is disabled, switch to true if wanting to augment files.
+augmentation:
+  enabled: false
+  speed_factors: [0.95, 1.0, 1.05]
+  noise_snr_db: [10, 25]

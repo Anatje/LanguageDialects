@@ -1,0 +1,15 @@
+# Core
+pandas==2.2.2
+numpy==1.26.4
+PyYAML==6.0.2
+matplotlib==3.9.0
+tqdm==4.66.4
+
+# Fast fetch & auth
+huggingface_hub==0.24.5
+
+# Audio + viz (used by CLI, QC, and Streamlit app)
+SoundFile==0.12.1
+librosa==0.10.2.post1
+pydub==0.25.1
+streamlit==1.36.0

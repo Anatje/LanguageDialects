@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+build/
+dist/
+pip-wheel-metadata/
+*.log
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Editors / OS
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Testing / typing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Streamlit
+.streamlit/
+
+# Data (keep repo lean)
+data/**
+
+# Caches
+.cache/
+**/.cache/
+.huggingface/
+
+# Large media (avoid in repo)
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# Env / tokens
+.env
+.env.*
+HF_TOKEN
+token.txt
+
+# Hugging Face cache
+.hf_cache/
+
+# ignore large/local folders
+data/
+.venv/
+.hf_cache/
+.huggingface/
+.cache/
+**/.cache/

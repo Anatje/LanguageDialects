@@ -1,0 +1,4 @@
+# Optional: only needed for `python -m src.cli augment`
+# Use CPU wheels unless you specifically want CUDA.
+torch==2.4.0
+torchaudio==2.4.0
